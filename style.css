@@ -5,10 +5,48 @@ body {
   background: black;
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Header nav */
+header nav {
   display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: gray;
+  font-size: 1rem;
+  z-index: 1;
+}
+
+.nav-left,
+.nav-right {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-left:hover,
+.nav-right:hover {
+  color: white;
+}
+
+/* Main content */
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  text-align: center;
 }
 
 h1 {
@@ -16,6 +54,7 @@ h1 {
   color: #b388ff;
   text-shadow: 0 0 15px #b388ff, 0 0 30px #b388ff;
   animation: glow 2s ease-in-out infinite alternate;
+  margin-bottom: 10px;
 }
 
 @keyframes glow {
@@ -27,9 +66,7 @@ h1 {
   }
 }
 
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+.subtext {
+  font-size: 1.5rem;
+  color: gray;
 }
