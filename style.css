@@ -15,11 +15,11 @@ canvas {
   z-index: -1;
 }
 
-/* Header nav - centered */
 header nav {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  align-items: center;
+  gap: 60px;
   padding: 20px 0;
   position: absolute;
   top: 0;
@@ -27,19 +27,18 @@ header nav {
   z-index: 1;
 }
 
-/* Nav links */
 .nav-link {
   color: gray;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .nav-link:hover {
   color: white;
 }
 
-/* Main content */
 main {
   height: 100vh;
   display: flex;
@@ -47,6 +46,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 0 20px;
 }
 
 h1 {
@@ -69,4 +69,11 @@ h1 {
 .subtext {
   font-size: 1.5rem;
   color: gray;
+}
+
+.info-text {
+  max-width: 700px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: lightgray;
 }
